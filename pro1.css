@@ -1,0 +1,375 @@
+body {
+  margin: 0;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  perspective: 1300px;
+}
+
+.page {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  left: 50%;
+  transform-origin: left center;
+  transition: transform 0.8s ease-in-out;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+}
+
+#first,
+#first .back {
+  transform: rotateY(180deg);
+}
+
+#first {
+  z-index: 102;
+}
+
+#second {
+  z-index: 103;
+}
+
+#third .content {
+  width: 100%;
+  height: 100%;
+}
+
+#fourth {
+  z-index: 101;
+}
+
+.page > div,
+.outer,
+.content {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.back {
+  transform: rotateY(-180deg);
+}
+
+.outer {
+  width: 100%;
+  overflow: hidden;
+  z-index: 999;
+}
+
+.content {
+  width: 100%;
+  height: 100%;
+  background: red;
+}
+
+.front .content {
+  transform: translateX(-100%);
+}
+
+/* controls */
+#prev,
+#next {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  z-index: 999;
+}
+
+#prev:hover,
+#next:hover {
+  background: rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+}
+
+#prev {
+  top: 0;
+  left: 0;
+}
+
+#next {
+  top: 0;
+  left: 50%;
+}
+
+/* Rest of the CSS styles remain unchanged */
+
+.section1 {
+  min-height: 100vh;
+  background-color: #f1f3ee;
+}
+.head1 {
+  font-family: sail;
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 46.16px;
+  text-align: center;
+  color: #586245;
+  font-weight: bold;
+}
+.item {
+  font-family: Jost;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 23.12px;
+  text-align: center;
+  color: #586245;
+  padding-left: 50px;
+}
+.items {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.des {
+  width: 200.07px;
+  height: 452.67px;
+  top: -57.67px;
+  left: 1315.94px;
+  opacity: 0;
+  color: #bcc1b2;
+}
+.head2 {
+  font-family: Sail;
+  font-size: 62px;
+  font-weight: 400;
+  line-height: 71.55px;
+  text-align: center;
+  color: #000000;
+  margin-bottom: 6px;
+}
+.para2 {
+  font-family: Jost;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 28.9px;
+  text-align: center;
+  color: #5c5c5c;
+}
+.head3 {
+  font-family: Sail;
+  font-size: 62px;
+  font-weight: 400;
+  line-height: 71.55px;
+  text-align: center;
+  color: #586245;
+  margin-bottom: 0;
+}
+.align-time {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.align3 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.image1 {
+  height: 100%;
+}
+.head4 {
+  font-family: Sail;
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 32.31px;
+  text-align: center;
+}
+.para4 {
+  font-family: Jost;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 28.9px;
+  text-align: center;
+  color: #5c5c5c;
+  margin: 0;
+}
+.bg3 {
+  background-color: #f1f3ee;
+  width: 263.66px;
+  height: 227.43px;
+  top: 1829px;
+  left: 279.31px;
+  opacity: 1;
+  border: 3px dashed #a5aa9c;
+  border-radius: 55% 55% 0 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 36px;
+}
+.bg4 {
+  background-color: #fff5f0;
+  margin: 36px;
+  width: 263.66px;
+  height: 227.43px;
+  top: 1829px;
+  left: 279.31px;
+  opacity: 1;
+  border: 3px dashed #c8a898;
+  border-radius: 0 0 55% 55%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.section2 {
+  height: 100vh;
+  margin: 3% 15%;
+}
+.schedule-align {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.section3 {
+  background-image: url(https://s3-alpha-sig.figma.com/img/a86d/9db6/4e5189a291f54be9ece2f5a2332cb6ab?Expires=1712534400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=E-VLuJZBoYf8-XNQtXIyYajrNsSyD9dNQsJbwyo6TsWRsRzPITr1W6GrmOZ9Y9veeg14FoIkTSb7JbUPGOP~nBur~7LWnlNPtDKUatouasTwOQtPIyEAfpHAFtidrdKYF1NWOie8c2cSlQE4IOPar5V3h5zRfMauR~k2zL0xRG2JRbvw1qV9aBScKdeTUgD77jiwLi6bvdIMlEBKQkpwpgu04ifpz13Whsbk64UKezeI4jcuPlJT5Xs-KaGQPFCuksn3Q6H2kOlI6b7JQNI5BOicuufwvQvieI-VS0XXyBdlhPdaq-4Cz8kgZ4I9Yq5QtukUccFTwJ6bCjPFUhm5tA);
+  height: 100vh;
+  padding: 36px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.form {
+  width: 545px;
+  background-color: white;
+  height: 75%;
+}
+.inputele {
+  border-style: none;
+  font-size: 16px;
+  color: #5c5c5c;
+  margin: 0 0 0 54px;
+  padding: 6px;
+  width: 250px;
+}
+.head5 {
+  font-family: Sail;
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 55.39px;
+  text-align: center;
+  color: #000000;
+}
+.line {
+  border: 1px solid #bdbebc;
+  margin: 18px 45px;
+}
+.label2 {
+  font-family: Jost;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 23.12px;
+  text-align: left;
+  color: #5c5c5c;
+}
+.button2 {
+  background: #586245;
+  width: 141px;
+  height: 43px;
+  margin-left: 45px;
+  border: none;
+  color: #ffffff;
+  font-size: 18px;
+}
+.image3 {
+  border-radius: 55%;
+  width: 286.51px;
+  height: 247.15px;
+  opacity: 1;
+}
+.con3 {
+  width: 300.08px;
+  border-radius: 55%;
+  height: 241.24px;
+  top: 3475px;
+  left: 218.36px;
+  opacity: 1;
+  transform: rotate(1.78deg);
+  border: 3px dashed #a5aa9c;
+}
+.para6 {
+  font-family: Jost;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 26.01px;
+  text-align: center;
+  color: #c8a898;
+  margin: 0;
+}
+.para7 {
+  font-family: Jost;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 28.9px;
+  text-align: center;
+  color: #5c5c5c;
+  margin: 0;
+}
+.align4 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.align5 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.section4 {
+  height: 100vh;
+  margin: 6px 18px;
+}
+.image5 {
+  width: 1200px;
+  height: 236px;
+  top: 4074px;
+  left: 160px;
+  border-radius: 24px;
+  opacity: 1;
+  margin: 18px auto 0 auto;
+}
+.head6 {
+  font-family: Sail;
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 55.39px;
+  text-align: center;
+  color: #000000;
+  margin: 12px;
+}
+.section5 {
+  background-color: #f1f3ee;
+  padding: 16px;
+  height: 100vh;
+}
+.image5 {
+  width: 1090px;
+  height: 100%;
+}
+.footer {
+  background: #2d2420;
+  height: 35vh;
+  width: 100%;
+}
+.para9 {
+  font-family: Jost;
+  font-size: 24px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 34.68px;
+  text-align: center;
+  color: #ffffff;
+}
